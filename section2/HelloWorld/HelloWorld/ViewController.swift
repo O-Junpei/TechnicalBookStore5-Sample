@@ -9,22 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // 背景色を白色に
+        self.view.backgroundColor = UIColor.white
+        
         // インスタンス生成
         let label: UILabel = UILabel()
-        // サイズの指定
+        // サイズの指定、画面と同じ大きさにする
         label.frame = self.view.frame
         // テキストの設定
         label.text = "Hello World"
-        // フォントの設定
-        // 太字で40px
-        label.font = UIFont.boldSystemFont(ofSize: 40)
-        //中央揃え
+        // 中央揃え
         label.textAlignment = NSTextAlignment.center
-        //Viewに追加
+        // Viewに追加
         self.view.addSubview(label)
     }
 }

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DeleteStoryBorad
+//  UILabel
 //
-//  Created by junpei ono on 2018/08/31.
+//  Created by junpei ono on 2018/09/09.
 //  Copyright © 2018年 junpei ono. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
