@@ -14,37 +14,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var tabBarController: UITabBarController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        //ナビゲーションバー
+        // MARK: - NavigationBar
+        // タイトル、ボタンの色
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().barTintColor = UIColor.red
-        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        // ナビゲーションバーの背景色
+        UINavigationBar.appearance().barTintColor = UIColor.red
+        // 透過の設定
+        UINavigationBar.appearance().isTranslucent = false
         
-        //タブバーコントローラー
+        // MARK: - TabBar
+        // 選択時のタブアイコンの色
         UITabBar.appearance().tintColor = UIColor.orange
+        // 選択時のタブアイコンの色
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+        // タブバーの背景色
         UITabBar.appearance().barTintColor = .purple
+        // 透過の設定
         UITabBar.appearance().isTranslucent = false
         
+        // MARK: - TabBar
         // ページを格納する配列
         var viewControllers: [UIViewController] = []
         
+        // 1つ目のViewController
         let firstViewController: FirstViewController? = FirstViewController()
-        firstViewController?.tabBarItem = UITabBarItem(title: "First", image: UIImage(named: "tab-icon-sample"), tag: 1)
+        // TabBarのアイコンに設定する画像は30×30の透過画像
+        firstViewController?.tabBarItem = UITabBarItem(title: "First", image: UIImage(named: "swift-tab"), tag: 1)
         let firstNavigationController = UINavigationController(rootViewController: firstViewController!)
         viewControllers.append(firstNavigationController)
         
+        // 2つ目のViewController
         let secondViewController: SecondViewController? = SecondViewController()
         secondViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.downloads, tag: 2)
         let secondNavigationController = UINavigationController(rootViewController: secondViewController!)
         viewControllers.append(secondNavigationController)
         
+        // 3つ目のViewController
         let thirdViewController: ThirdViewController? = ThirdViewController()
         thirdViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.history, tag: 3)
         let thirdNavigationController = UINavigationController(rootViewController: thirdViewController!)
         viewControllers.append(thirdNavigationController)
         
+        // TabBarControllerにViewControllerの配列を設定
         tabBarController = UITabBarController()
         tabBarController?.setViewControllers(viewControllers, animated: false)
         
@@ -55,28 +67,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
+    func applicationWillResignActive(_ application: UIApplication) {}
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
+    func applicationDidEnterBackground(_ application: UIApplication) {}
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
+    func applicationWillEnterForeground(_ application: UIApplication) {}
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+    func applicationDidBecomeActive(_ application: UIApplication) {}
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
+    func applicationWillTerminate(_ application: UIApplication) {}
 }
 
