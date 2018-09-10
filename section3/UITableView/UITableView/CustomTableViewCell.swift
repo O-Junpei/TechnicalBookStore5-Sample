@@ -17,7 +17,6 @@ class CustomTableViewCell: UITableViewCell {
         thumbnailImageView = UIImageView()
         thumbnailImageView.backgroundColor = UIColor.lightGray
         thumbnailImageView.contentMode = UIViewContentMode.scaleAspectFit
-        thumbnailImageView.image = UIImage(named: "swift")
         self.contentView.addSubview(thumbnailImageView)
 
         // label
@@ -40,11 +39,12 @@ class CustomTableViewCell: UITableViewCell {
         let cellHeight: CGFloat = self.frame.height
         let margin: CGFloat = 8
 
-        // imageView
-        let imageViewSize :CGFloat = cellHeight - margin * 2
+        // thumbnailImageViewの縦、横幅を指定
+        let imageViewSize: CGFloat = cellHeight - margin * 2
+        // thumbnailImageViewの場所、大きさを指定
         thumbnailImageView.frame = CGRect(x: margin, y: margin, width: imageViewSize, height: imageViewSize)
 
-        // label
+        // labelの場所、大きさを背定
         label.frame = CGRect(x: cellHeight, y: 0, width: cellWidth - cellHeight, height: cellHeight)
     }
 }

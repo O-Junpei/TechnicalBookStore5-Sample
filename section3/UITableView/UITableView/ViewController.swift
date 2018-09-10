@@ -12,16 +12,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //テーブルビューの初期化
+        // テーブルビューの初期化
         tableView = UITableView()
-        //デリゲート
         tableView.delegate = self
         tableView.dataSource = self
-        //テーブルビューの大きさの指定
+        // テーブルビューの大きさの指定
         tableView.frame = self.view.frame
-        //テーブルビューの設置
+        // カスタムセルをテーブルビューに登録する
         tableView.register(CustomTableViewCell.self,
             forCellReuseIdentifier: NSStringFromClass(CustomTableViewCell.self))
+        // 高さを80に設定
         tableView.rowHeight = 80
         self.view.addSubview(tableView)
     }
@@ -36,9 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //myItems配列の中身をテキストにして登録した
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(CustomTableViewCell.self))! as! CustomTableViewCell
-        //以下の行を追加するとセル選択時にハイライトしなくなる
-        cell.selectionStyle = .none
-        cell.label.text = "ああああ" + indexPath.row.description
+        cell.thumbnailImageView.image = UIImage(named: "swift")
+        cell.label.text = "セル番号:" + indexPath.row.description
         return cell
     }
 
