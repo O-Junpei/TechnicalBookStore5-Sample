@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        
+        self.view.backgroundColor = UIColor.white
         // CustomViewのインスタンスを生成
         let customView = CustomView()
         // x 50, y 50 に width 100, height 120

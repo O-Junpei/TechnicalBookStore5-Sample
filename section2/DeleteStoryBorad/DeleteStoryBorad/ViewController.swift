@@ -14,11 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // 背景色を白色に
         self.view.backgroundColor = UIColor.white
-        
         // インスタンス生成
         let label: UILabel = UILabel()
         // サイズの指定、画面と同じ大きさにする
-        label.frame = self.view.frame
+        label.frame = self.view.bounds
         // テキストの設定
         label.text = "Hello World"
         // 中央揃え

@@ -8,13 +8,11 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = "Second View"
         self.view.backgroundColor = .orange
-        
         let firstViewLabel = UILabel()
         firstViewLabel.frame = self.view.frame
         firstViewLabel.textAlignment = .center
