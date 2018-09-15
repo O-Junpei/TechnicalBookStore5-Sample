@@ -7,16 +7,17 @@
 //
 
 import UIKit
-
 class CustomTableViewCell: UITableViewCell {
     var thumbnailImageView: UIImageView!
     var label: UILabel!
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style:
+            UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // imageView
         thumbnailImageView = UIImageView()
         thumbnailImageView.backgroundColor = UIColor.lightGray
-        thumbnailImageView.contentMode = UIViewContentMode.scaleAspectFit
+        thumbnailImageView.contentMode
+            = UIViewContentMode.scaleAspectFit
         self.contentView.addSubview(thumbnailImageView)
 
         // label
@@ -29,10 +30,6 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder: ) has not been implemented")
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-    }
-
     override func layoutSubviews() {
         super.layoutSubviews()
         let cellWidth: CGFloat = self.frame.width
@@ -42,9 +39,13 @@ class CustomTableViewCell: UITableViewCell {
         // thumbnailImageViewの縦、横幅を指定
         let imageViewSize: CGFloat = cellHeight - margin * 2
         // thumbnailImageViewの場所、大きさを指定
-        thumbnailImageView.frame = CGRect(x: margin, y: margin, width: imageViewSize, height: imageViewSize)
+        thumbnailImageView.frame = CGRect(
+            x: margin, y: margin,
+            width: imageViewSize, height: imageViewSize)
 
         // labelの場所、大きさを背定
-        label.frame = CGRect(x: cellHeight, y: 0, width: cellWidth - cellHeight, height: cellHeight)
+        label.frame = CGRect(
+            x: cellHeight, y: 0,
+            width: cellWidth - cellHeight, height: cellHeight)
     }
 }

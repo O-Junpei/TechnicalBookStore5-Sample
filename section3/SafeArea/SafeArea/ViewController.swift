@@ -52,8 +52,12 @@ class ViewController: UIViewController {
             let width:CGFloat = self.view.frame.width
             let height:CGFloat = self.view.frame.height
             let labelHeight:CGFloat = 50
-            topSafeAreaLabel.frame = CGRect(x: 0, y: topSafeAreaHeight, width: width, height: labelHeight)
-            bottomSafeAreaLabel.frame = CGRect(x: 0, y: height - (labelHeight + bottomSafeAreaHeight), width: width, height: labelHeight)
+            topSafeAreaLabel.frame = CGRect(
+                x: 0, y: topSafeAreaHeight,
+                width: width, height: labelHeight)
+            bottomSafeAreaLabel.frame = CGRect(
+                x: 0, y: height - (labelHeight + bottomSafeAreaHeight),
+                width: width, height: labelHeight)
         }
     }
 }
