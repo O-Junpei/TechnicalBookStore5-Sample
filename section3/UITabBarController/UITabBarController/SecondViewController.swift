@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         let label: UILabel = UILabel()
-        label.text = "First"
+        label.text = "Second"
         label.frame = self.view.frame
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.boldSystemFont(ofSize: 40)
