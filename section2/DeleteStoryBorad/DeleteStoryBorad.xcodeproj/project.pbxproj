@@ -190,13 +190,16 @@
 				TargetAttributes = {
 					8DB45BA52138421600F1C5A7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					8DB45BB92138421700F1C5A7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8DB45BA52138421600F1C5A7;
 					};
 					8DB45BC42138421700F1C5A7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8DB45BA52138421600F1C5A7;
 					};
 				};
@@ -428,7 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBorad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -447,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBorad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -467,7 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBoradTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeleteStoryBorad.app/DeleteStoryBorad";
 			};
@@ -488,7 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBoradTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeleteStoryBorad.app/DeleteStoryBorad";
 			};
@@ -508,7 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBoradUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DeleteStoryBorad;
 			};
@@ -528,7 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.DeleteStoryBoradUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DeleteStoryBorad;
 			};
