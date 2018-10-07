@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_
         application: UIApplication,
         didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // MARK: - TabBarController
         // ページを格納する配列
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 2つ目のViewController
         let secondVC: SecondVC? = SecondVC()
         secondVC?.tabBarItem = UITabBarItem(
-            tabBarSystemItem: UITabBarSystemItem.downloads, tag: 2)
+            tabBarSystemItem: UITabBarItem.SystemItem.downloads, tag: 2)
         let secondNavigationController = UINavigationController(
             rootViewController: secondVC!)
         viewControllers.append(secondNavigationController)
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 3つ目のViewController
         let thirdVC: ThirdVC? = ThirdVC()
         thirdVC?.tabBarItem = UITabBarItem(
-            tabBarSystemItem: UITabBarSystemItem.history, tag: 3)
+            tabBarSystemItem: UITabBarItem.SystemItem.history, tag: 3)
         let thirdNavigationController = UINavigationController(
             rootViewController: thirdVC!)
         viewControllers.append(thirdNavigationController)

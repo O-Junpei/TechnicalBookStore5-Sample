@@ -24,7 +24,7 @@ class CustomView: UIView {
         // ImageViewをCustomViewに追加
         imageView = UIImageView()
         imageView.image = UIImage(named: "swift")
-        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
         self.addSubview(imageView)
         // LabelをCustomViewに追加
         label = UILabel()
