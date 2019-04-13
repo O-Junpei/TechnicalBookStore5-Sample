@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white
         // x = 100, y = 100 の位置に
         // width 150, height可変のUILabelを設置
         // インスタンス生成
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         // 背景色を薄い灰色にする
         label.backgroundColor = UIColor.lightGray
         // Viewに追加
-        self.view.addSubview(label)
+        view.addSubview(label)
     }
 }
 
