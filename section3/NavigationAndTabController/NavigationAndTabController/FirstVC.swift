@@ -10,27 +10,32 @@ import UIKit
 class FirstVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "First View"
-        self.view.backgroundColor = .orange
+        title = "First View"
+        view.backgroundColor = .orange
         // Viewの横幅を取得
-        let viewWidth: CGFloat = self.view.frame.size.width
+        let viewWidth = view.frame.size.width
         // Viewの高さを取得
-        let viewHeight: CGFloat = self.view.frame.size.height
+        let viewHeight = view.frame.size.height
         // ステータスバーの高さを取得
-        let statusBarHeight: CGFloat =
+        let statusBarHeight =
             UIApplication.shared.statusBarFrame.size.height
         // ナビゲーションバーの高さの取得
-        let navigationBarHeight: CGFloat = (
-            self.navigationController?.navigationBar.frame.size.height)!
+        var navigationBarHeight: CGFloat = 0
+        if let navigationController = navigationController {
+            navigationBarHeight
+                = navigationController.navigationBar.frame.size.height
+        }
         // タブバーの高さを取得
-        let tabBarHeight: CGFloat = (
-            self.tabBarController?.tabBar.frame.size.height)!
+        var tabBarHeight: CGFloat = 0
+        if let tabBarController = tabBarController {
+            tabBarHeight = tabBarController.tabBar.frame.size.height
+        }
         // 実際に使える画面の高さ
-        let contentsViewHeight: CGFloat =
-            viewHeight - (statusBarHeight + navigationBarHeight + tabBarHeight)
+        let contentsViewHeight = viewHeight
+            - (statusBarHeight + navigationBarHeight + tabBarHeight)
 
         let firstViewLabel = UILabel()
-        // statusBarとnavigationBarの下にLabelを貼る
+        // statusBarとnavigationBarの下にLabelを追加
         firstViewLabel.frame = CGRect(
             x: 0, y: statusBarHeight + navigationBarHeight,
             width: viewWidth,
@@ -39,6 +44,6 @@ class FirstVC: UIViewController {
         firstViewLabel.font = UIFont.boldSystemFont(ofSize: 40)
         firstViewLabel.textColor = .black
         firstViewLabel.text = "First View"
-        self.view.addSubview(firstViewLabel)
+        view.addSubview(firstViewLabel)
     }
 }

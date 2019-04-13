@@ -11,7 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "SecondView"
-        self.view.backgroundColor = UIColor.white
+        title = "SecondView"
+        view.backgroundColor = UIColor.white
     }
 }

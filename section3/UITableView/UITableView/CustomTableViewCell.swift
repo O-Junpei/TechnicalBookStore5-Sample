@@ -8,22 +8,23 @@
 
 import UIKit
 class CustomTableViewCell: UITableViewCell {
-    var thumbnailImageView: UIImageView!
-    var label: UILabel!
+    var thumbnailImageView: UIImageView
+    var label: UILabel
     override init(style:
-            UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        // imageView
+            UITableViewCell.CellStyle, reuseIdentifier: String?) {
         thumbnailImageView = UIImageView()
+        label = UILabel()
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        // imageView
         thumbnailImageView.backgroundColor = UIColor.lightGray
         thumbnailImageView.contentMode
-            = UIViewContentMode.scaleAspectFit
-        self.contentView.addSubview(thumbnailImageView)
+            = UIView.ContentMode.scaleAspectFit
+        contentView.addSubview(thumbnailImageView)
 
         // label
-        label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24)
-        self.contentView.addSubview(label)
+        contentView.addSubview(label)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -32,8 +33,8 @@ class CustomTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        let cellWidth: CGFloat = self.frame.width
-        let cellHeight: CGFloat = self.frame.height
+        let cellWidth = frame.width
+        let cellHeight = frame.height
         let margin: CGFloat = 8
 
         // thumbnailImageViewの縦、横幅を指定

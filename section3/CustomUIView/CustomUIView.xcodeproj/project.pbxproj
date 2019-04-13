@@ -193,16 +193,16 @@
 				TargetAttributes = {
 					8DDC163B2144D4D0002CF3E7 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					8DDC164F2144D4D2002CF3E7 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 8DDC163B2144D4D0002CF3E7;
 					};
 					8DDC165A2144D4D2002CF3E7 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 8DDC163B2144D4D0002CF3E7;
 					};
 				};
@@ -433,7 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,7 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -469,7 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomUIView.app/CustomUIView";
 			};
@@ -489,7 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomUIView.app/CustomUIView";
 			};
@@ -508,7 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CustomUIView;
 			};
@@ -527,7 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiswiswift.CustomUIViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CustomUIView;
 			};

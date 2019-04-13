@@ -7,8 +7,7 @@
 //
 
 import UIKit
-class ViewController: UIViewController, UITableViewDelegate,
-    UITableViewDataSource {
+class ViewController: UIViewController {
     var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +21,14 @@ class ViewController: UIViewController, UITableViewDelegate,
         tableView.register(
             CustomTableViewCell.self,
             forCellReuseIdentifier:
-            NSStringFromClass(CustomTableViewCell.self))
+                NSStringFromClass(CustomTableViewCell.self))
         // 高さを80に設定
         tableView.rowHeight = 80
-        self.view.addSubview(tableView)
+        view.addSubview(tableView)
     }
-
-    // MARK: - TableViewのデリゲートッメソッド
+}
+// MARK: - TableViewのデリゲートッメソッド
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     // テーブルビューのセルの数を設定する
     func tableView(_ tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
@@ -39,10 +39,10 @@ class ViewController: UIViewController, UITableViewDelegate,
     func tableView(_ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //myItems配列の中身をテキストにして登録した
-        let cell: CustomTableViewCell
+        let cell
             = tableView.dequeueReusableCell(withIdentifier:
-                    NSStringFromClass(CustomTableViewCell.self))!
-                    as! CustomTableViewCell
+                    NSStringFromClass(CustomTableViewCell.self))
+        as! CustomTableViewCell
         cell.thumbnailImageView.image = UIImage(named: "swift")
         cell.label.text = "セル番号:" + indexPath.row.description
         return cell
@@ -50,8 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate,
 
     // テーブルビューのセルが押されたら呼ばれる
     func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
+        didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番のセルを選択しました！ ")
     }
 }
-

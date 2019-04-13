@@ -11,7 +11,7 @@ class CustomView: UIView {
     // メンバ変数
     var imageView: UIImageView!
     var label: UILabel!
-    // 必須イニシャライザのoverrideに必要
+    // イニシャライザのoverrideに必要
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -19,18 +19,18 @@ class CustomView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // 黒い枠線
-        self.layer.borderWidth = 2.0
-        self.layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.black.cgColor
         // ImageViewをCustomViewに追加
         imageView = UIImageView()
         imageView.image = UIImage(named: "swift")
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        self.addSubview(imageView)
+        addSubview(imageView)
         // LabelをCustomViewに追加
         label = UILabel()
         label.text = "Swift"
         label.textAlignment = .center
-        self.addSubview(label)
+        addSubview(label)
     }
     // CustomViewが表示される前に呼ばれる
     override func layoutSubviews() {
@@ -39,7 +39,7 @@ class CustomView: UIView {
         let viewHeight: CGFloat = frame.height
         let labelHeight: CGFloat = 20
         // viewの高さからlabelの高さを引い高さがimageViewの高さ
-        let imageViewHeight:CGFloat = viewHeight - labelHeight
+        let imageViewHeight: CGFloat = viewHeight - labelHeight
         // imageViewの大きさを設定、
         imageView.frame = CGRect(
             x: 0, y: 0,

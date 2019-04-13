@@ -10,7 +10,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var tabBarController: UITabBarController?
     func application(_
         application: UIApplication,
         didFinishLaunchingWithOptions
@@ -21,38 +20,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var viewControllers: [UIViewController] = []
 
         // 1つ目のViewController
-        let firstVC:FirstVC? = FirstVC()
+        let firstVC = FirstVC()
         // TabBarのアイコンに設定する画像は30×30の透過画像
-        firstVC?.tabBarItem = UITabBarItem(
+        firstVC.tabBarItem = UITabBarItem(
             title: "First", image: UIImage(named: "swift-tab"), tag: 1)
         // NavigationControllerのrootにfirstVCを設定
         let firstNavigationController = UINavigationController(
-            rootViewController: firstVC!)
+            rootViewController: firstVC)
         viewControllers.append(firstNavigationController)
 
         // 2つ目のViewController
-        let secondVC: SecondVC? = SecondVC()
-        secondVC?.tabBarItem = UITabBarItem(
+        let secondVC = SecondVC()
+        secondVC.tabBarItem = UITabBarItem(
             tabBarSystemItem: UITabBarItem.SystemItem.downloads, tag: 2)
         let secondNavigationController = UINavigationController(
-            rootViewController: secondVC!)
+            rootViewController: secondVC)
         viewControllers.append(secondNavigationController)
 
         // 3つ目のViewController
-        let thirdVC: ThirdVC? = ThirdVC()
-        thirdVC?.tabBarItem = UITabBarItem(
+        let thirdVC = ThirdVC()
+        thirdVC.tabBarItem = UITabBarItem(
             tabBarSystemItem: UITabBarItem.SystemItem.history, tag: 3)
         let thirdNavigationController = UINavigationController(
-            rootViewController: thirdVC!)
+            rootViewController: thirdVC)
         viewControllers.append(thirdNavigationController)
 
         // TabBarControllerにViewControllerの配列を設定
-        tabBarController = UITabBarController()
-        tabBarController?.setViewControllers(
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(
             viewControllers, animated: false)
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.makeKeyAndVisible()
-        window?.rootViewController = tabBarController
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        window.rootViewController = tabBarController
+        self.window = window
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {}

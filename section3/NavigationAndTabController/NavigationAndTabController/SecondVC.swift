@@ -11,14 +11,14 @@ import UIKit
 class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second View"
-        self.view.backgroundColor = .orange
+        title = "Second View"
+        view.backgroundColor = .orange
         let firstViewLabel = UILabel()
-        firstViewLabel.frame = self.view.frame
+        firstViewLabel.frame = view.frame
         firstViewLabel.textAlignment = .center
         firstViewLabel.font = UIFont.boldSystemFont(ofSize: 40)
         firstViewLabel.textColor = .black
         firstViewLabel.text = "Second View"
-        self.view.addSubview(firstViewLabel)
+        view.addSubview(firstViewLabel)
     }
 }

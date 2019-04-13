@@ -11,12 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white
         // CustomViewのインスタンスを生成
         let customView = CustomView()
         // x 50, y 50 に width 100, height 120
         customView.frame = CGRect(x: 50, y: 50, width: 100, height: 120)
-        self.view.addSubview(customView)
+        view.addSubview(customView)
     }
 }
-

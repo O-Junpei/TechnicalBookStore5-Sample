@@ -13,16 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var navigationController: UINavigationController?
     func application(_
-        application: UIApplication,
-        didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.makeKeyAndVisible()
-        let viewController: UIViewController = ViewController()
+        application: UIApplication, didFinishLaunchingWithOptions
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        let viewController = ViewController()
         // navigationControllerをrootViewControllerに設定する
         navigationController =
             UINavigationController(rootViewController: viewController)
-        window!.rootViewController = navigationController
+        window.rootViewController = navigationController
+        self.window = window
         return true
     }
 
